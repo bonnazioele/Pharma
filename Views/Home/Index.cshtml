@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Pharma.Models.Medicine>
+
+<h1>Welcome to Pharmasuit</h1>
+<p>Find medicines below:</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var medicine in Model)
+        {
+            <tr>
+                <td>@medicine.Name</td>
+                <td>@medicine.Description</td>
+                <td>@medicine.Price</td>
+                <td>@medicine.Stock</td>
+            </tr>
+        }
+    </tbody>
+</table>
